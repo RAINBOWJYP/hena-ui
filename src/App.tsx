@@ -1,10 +1,12 @@
 import React from "react";
 import Button from "./components/Button";
+import ProfileThumb from "./components/ProfileThumb";
 
 const App = () => {
   return (
-    <div className="bg-slate-500 w-20 text-red-400">
+    <div className="">
       <Button label={"dd"} />
+      <ProfileThumb src="/image/onion_koongya.jpg" alt="profile-img" />
     </div>
   );
 };
