@@ -1,10 +1,10 @@
-import { CLASS_FIX, setClassName } from "../utils/classFix";
+import { setClassName } from "../utils/classFix";
 import "./button.css";
 
 export interface ButtonProps {
   variant?: "primary" | "secondary" | "tertiary";
   size?: "small" | "medium" | "large";
-  children: string;
+  children: React.ReactNode;
   onClick?: () => void;
 }
 

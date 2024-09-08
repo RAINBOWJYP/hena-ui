@@ -27,3 +27,19 @@ export const Primary: Story = {
     children: "Button",
   },
 };
+
+export const Secondary: Story = {
+  args: {
+    variant: "secondary",
+    size: "medium",
+    children: "Button",
+  },
+};
+
+export const Tertiary: Story = {
+  args: {
+    variant: "tertiary",
+    size: "medium",
+    children: "Button",
+  },
+};
