@@ -50,6 +50,8 @@ module.exports = {
         800: "#313030",
         900: "#1c1b1c",
       },
+      error: "#B3261E",
+      "on-error": "#ffffff",
       black: "#000000",
       white: "#ffffff",
     },

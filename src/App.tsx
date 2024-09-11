@@ -1,12 +1,14 @@
 import React from "react";
-import FilledButton from "./components/FilledButton";
 import ProfileThumb from "./components/ProfileThumb";
+import Icon from "icons";
+import Input from "components/Input";
 
 const App = () => {
   return (
     <div className="">
-      <FilledButton label={"dd"} />
       <ProfileThumb src="/image/onion_koongya.jpg" alt="profile-img" />
+      <Icon.Menu />
+      <Input error="error" label="email" />
     </div>
   );
 };
