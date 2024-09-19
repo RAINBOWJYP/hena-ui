@@ -1,8 +1,6 @@
+import Icon from "./lib/icons";
+import { Input, ProfileThumb } from "./lib/components";
 import React from "react";
-import ProfileThumb from "./components/ProfileThumb";
-import Icon from "icons";
-import Input from "components/Input";
-
 const App = () => {
   return (
     <div className="">

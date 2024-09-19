@@ -1,4 +1,4 @@
-import Icon from "icons";
+import Icon from "../icons";
 import ErrorDescription from "./ErrorDescription";
 import Label from "./Label";
 

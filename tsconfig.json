@@ -9,9 +9,14 @@
     "jsx": "react-jsx",
     "declaration": true,
     "noEmit": false,
-    "baseUrl": "./src",
+    "baseUrl": "./",
     "paths": {
-      "*": ["*"]
+      "@lib": ["src/lib"],
+      "@lib/*": ["src/lib/*"],
+      "@components": ["src/lib/components"],
+      "@components/*": ["src/lib/components/*"]
     }
-  }
+  },
+  "include": ["src/lib/**/*.ts", "src/lib/**/*.tsx"],
+  "exclude": ["node_modules"]
 }
