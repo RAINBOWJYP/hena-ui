@@ -9,6 +9,7 @@
     "jsx": "react-jsx",
     "declaration": true,
     "noEmit": false,
+    "outDir": "dist",
     "baseUrl": "./",
     "paths": {
       "@lib": ["src/lib"],
