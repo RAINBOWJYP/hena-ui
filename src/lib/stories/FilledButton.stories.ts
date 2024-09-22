@@ -1,6 +1,6 @@
+import FilledButton from "../components/FilledButton";
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
-import FilledButton from "../components/FilledButton";
 
 const meta = {
   title: "Button/FilledButton",

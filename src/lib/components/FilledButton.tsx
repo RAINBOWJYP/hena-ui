@@ -1,6 +1,4 @@
 import { setClassName } from "../utils/classFix";
-import "./button.css";
-
 export interface ButtonProps {
   variant?: "primary" | "secondary" | "tertiary";
   size?: "small" | "medium" | "large";

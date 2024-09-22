@@ -13,9 +13,7 @@
     "baseUrl": "./",
     "paths": {
       "@lib": ["src/lib"],
-      "@lib/*": ["src/lib/*"],
-      "@components": ["src/lib/components"],
-      "@components/*": ["src/lib/components/*"]
+      "@lib/*": ["src/lib/*"]
     }
   },
   "include": ["src/lib/**/*.ts", "src/lib/**/*.tsx"],
