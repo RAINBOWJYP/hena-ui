@@ -1,7 +1,8 @@
 {
   "name": "hena-ui",
-  "version": "1.0.1",
-  "main": "index.tsx",
+  "version": "1.0.2",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -9,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "react-scripts start",
     "storybook": "storybook dev -p 6006",
-    "build": "tsc",
+    "build": "rm -rf dist && mkdir dist && tsc",
     "build-storybook": "storybook build"
   },
   "keywords": [],
