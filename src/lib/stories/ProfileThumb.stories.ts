@@ -13,6 +13,9 @@ const meta = {
     src: { control: "text", description: "Profile Thumbnail Image Src" },
     alt: { control: "text", description: "Profile Thumbnail Image alt" },
   },
+  args: {
+    onClick: fn(),
+  },
 } satisfies Meta<typeof ProfileThumb>;
 
 export default meta;

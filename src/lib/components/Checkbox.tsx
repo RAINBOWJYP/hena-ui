@@ -1,7 +1,7 @@
 import React from "react";
 import { DetailedHTMLProps, InputHTMLAttributes } from "react";
 
-interface CheckboxProps
+export interface CheckboxProps
   extends DetailedHTMLProps<
     InputHTMLAttributes<HTMLInputElement>,
     HTMLInputElement
@@ -16,11 +16,11 @@ const Checkbox = ({ children, ...props }: CheckboxProps) => {
         <input
           type="checkbox"
           className="form-checkbox h-5 w-5 text-primary-600 accent-primary-600 p-1 border-primary-600"
-          id="checkbox"
+          id={children}
           {...props}
         />
       </div>
-      <label className="ml-2 text-gray-700" htmlFor="checkbox">
+      <label className="ml-2 text-gray-700" htmlFor={children}>
         {children}
       </label>
     </div>

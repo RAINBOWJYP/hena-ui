@@ -1,7 +1,7 @@
 import { InputProps } from "@lib/type";
 import Icon from "../icons";
 import ErrorDescription from "./ErrorDescription";
-import Label from "./Label";
+import FieldLabel from "./FieldLabel";
 
 const Input = ({
   error,
@@ -14,12 +14,12 @@ const Input = ({
 }: InputProps) => {
   return (
     <div className="w-full relative">
-      <Label
+      <FieldLabel
         htmlFor="input"
         className={`absolute -top-2 left-4 focus-within:text-primary-300 ${error ? "text-error" : ""}`}
       >
         label
-      </Label>
+      </FieldLabel>
       <div
         className={`p-4 rounded-[4px] border ${error ? "border-error" : "border-netural-400"} flex justify-between focus-within:border-primary-300`}
       >
