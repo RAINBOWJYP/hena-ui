@@ -1,7 +1,6 @@
 import Icon from "./lib/icons";
-import { Checkbox, Input, ProfileThumb } from "./lib/components";
+import { Checkbox, Divider, Input, ProfileThumb } from "./lib/components";
 import React, { useState } from "react";
-import FieldLabel from "./lib/components/FieldLabel";
 const App = () => {
   const [value, setValue] = useState<string>("");
   const errorMsg = () => {
@@ -20,10 +19,12 @@ const App = () => {
       />
       <ProfileThumb src="/image/onion_koongya.jpg" alt="profile-img" />
       <Icon.Menu />
+      <Divider variant="middle" />
       <div className="flex">
         <Checkbox id="happy" onChange={(e) => console.log(e.target.checked)}>
           행복
         </Checkbox>
+        <Divider orientation="vertical" variant="middle" />
         <Checkbox id="sad" onChange={(e) => console.log(e.target.checked)}>
           절망
         </Checkbox>

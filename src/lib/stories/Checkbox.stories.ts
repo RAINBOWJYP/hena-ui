@@ -1,12 +1,11 @@
 import { Checkbox } from "@lib/components";
-import { CheckboxProps } from "@lib/components/Checkbox";
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
 import React from "react";
 
 const meta = {
   title: "TextField/Checkbox",
-  component: Checkbox as React.FC<CheckboxProps>,
+  component: Checkbox,
   parameters: {
     layout: "centered",
   },

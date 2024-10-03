@@ -1,13 +1,4 @@
-import React from "react";
-import { DetailedHTMLProps, InputHTMLAttributes } from "react";
-
-export interface CheckboxProps
-  extends DetailedHTMLProps<
-    InputHTMLAttributes<HTMLInputElement>,
-    HTMLInputElement
-  > {
-  children: string;
-}
+import { CheckboxProps } from "@lib/type";
 
 const Checkbox = ({ children, ...props }: CheckboxProps) => {
   return (
