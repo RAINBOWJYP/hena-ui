@@ -11,10 +11,13 @@
     "start": "react-scripts start",
     "storybook": "storybook dev -p 6006",
     "build": "rm -rf dist && mkdir dist && tsc",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_c175144ef97e5e7"
   },
   "keywords": [],
-  "author": "jiyoung park",
+  "author": {
+    "name": "jiyoung park"
+  },
   "license": "ISC",
   "private": false,
   "description": "",
@@ -41,6 +44,7 @@
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.20",
+    "chromatic": "^11.12.0",
     "postcss": "^8.4.45",
     "prop-types": "^15.8.1",
     "tailwindcss": "^3.4.10",
