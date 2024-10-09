@@ -12,6 +12,11 @@ const meta = {
   argTypes: {
     src: { control: "text", description: "Profile Thumbnail Image Src" },
     alt: { control: "text", description: "Profile Thumbnail Image alt" },
+    size: {
+      control: "select",
+      options: ["small", "medium", "large"],
+      description: "Profile Thumbnail Image Size",
+    },
   },
   args: {
     onClick: fn(),
@@ -21,8 +26,16 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
+export const Default: Story = {
   args: {
+    src: "/image/onion_koongya.jpg",
+    alt: "profile-img",
+  },
+};
+
+export const Small: Story = {
+  args: {
+    size: "small",
     src: "/image/onion_koongya.jpg",
     alt: "profile-img",
   },

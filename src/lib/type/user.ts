@@ -1,7 +1,9 @@
-import React from "react";
+import React from 'react'
 
-export interface IProfileThumbProps {
-  src: string;
-  alt: string;
-  onClick?: React.MouseEventHandler<HTMLImageElement>;
+export interface ProfileThumbProps {
+    src: string
+    alt: string
+    size?: 'small' | 'medium' | 'large'
+    isBorder?: boolean
+    onClick?: React.MouseEventHandler<HTMLImageElement>
 }
