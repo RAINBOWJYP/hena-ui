@@ -1,6 +1,9 @@
-name: 'Chromatic'
+name: 'Chromatic Deploy'
 
-on: push
+on:
+    push:
+        branches:
+            - develop
 
 jobs:
     chromatic:
@@ -17,8 +20,10 @@ jobs:
             - name: Install pnpm
               run: npm install -g pnpm
             - name: Install dependencies
-              run: pnpm chromatic
+              # ⚠️ See your package manager's documentation for the correct command to install dependencies in a CI environment.
+              run: pnpm ci
             - name: Run Chromatic
               uses: chromaui/action@latest
               with:
+                  # ⚠️ Make sure to configure a `CHROMATIC_PROJECT_TOKEN` repository secret
                   projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
