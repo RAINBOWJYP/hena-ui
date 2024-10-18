@@ -1,21 +1,33 @@
 {
-  "compilerOptions": {
-    "target": "es2016",
-    "module": "commonjs",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "skipLibCheck": true,
-    "jsx": "react-jsx",
-    "declaration": true,
-    "noEmit": false,
-    "outDir": "dist",
-    "baseUrl": "./",
-    "paths": {
-      "@lib": ["src/lib"],
-      "@lib/*": ["src/lib/*"]
-    }
-  },
-  "include": ["src/lib/**/*.ts", "src/lib/**/*.tsx"],
-  "exclude": ["node_modules"]
+    "compilerOptions": {
+        "target": "ES2020",
+        "useDefineForClassFields": true,
+        "lib": ["ES2020", "DOM", "DOM.Iterable"],
+        "module": "ESNext",
+        "skipLibCheck": true,
+
+        /* Bundler mode */
+        "moduleResolution": "bundler",
+        "allowImportingTsExtensions": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "jsx": "react-jsx",
+
+        "baseUrl": "./",
+        "paths": {
+            "@/*": ["src/*"],
+            "@/components": ["src/components"],
+            "@/components/*": ["src/components/*"]
+        },
+
+        /* Linting */
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noFallthroughCasesInSwitch": true
+    },
+    "include": ["src"],
+    "exclude": ["src/stories"],
+    "references": [{ "path": "./tsconfig.node.json" }]
 }

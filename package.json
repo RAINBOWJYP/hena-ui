@@ -1,67 +1,77 @@
 {
     "name": "hena-ui",
-    "version": "1.0.3",
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
-    "files": [
-        "dist"
-    ],
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "react-scripts start",
-        "storybook": "storybook dev -p 6006",
-        "build": "rm -rf dist && mkdir dist && tsc",
-        "build-storybook": "storybook build",
-        "chromatic": "chromatic --exit-zero-on-changes"
-    },
-    "keywords": [],
+    "private": false,
+    "version": "1.0.5",
+    "type": "module",
     "author": {
         "name": "jiyoung park"
     },
     "license": "ISC",
-    "private": false,
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/RAINBOWJYP/hena-ui"
+    },
     "description": "",
+    "files": [
+        "dist"
+    ],
+    "main": "dist/index.umd.js",
+    "module": "dist/index.esm.js",
+    "types": "dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/index.es.js",
+            "require": "./dist/index.umd.js",
+            "types": "./dist/index.d.ts"
+        },
+        "./style": "./dist/index.css"
+    },
+    "scripts": {
+        "dev": "vite",
+        "build": "rm -rf dist && tsc && vite build",
+        "lint": "eslint .",
+        "preview": "vite preview",
+        "storybook": "storybook dev -p 6006",
+        "build-storybook": "storybook build"
+    },
     "dependencies": {
-        "ajv": "^8.17.1",
-        "ajv-keywords": "^5.1.0",
-        "pnpm": "^9.9.0",
         "react": "^18.3.1",
-        "react-dom": "^18.3.1",
-        "react-scripts": "^5.0.1",
-        "storybook": "^8.2.9"
+        "react-dom": "^18.3.1"
     },
     "devDependencies": {
-        "@chromatic-com/storybook": "^1.8.0",
-        "@storybook/addon-essentials": "^8.2.9",
-        "@storybook/addon-interactions": "^8.2.9",
-        "@storybook/addon-links": "^8.2.9",
-        "@storybook/addon-onboarding": "^8.2.9",
-        "@storybook/blocks": "^8.2.9",
-        "@storybook/preset-create-react-app": "^8.2.9",
-        "@storybook/react": "^8.2.9",
-        "@storybook/react-webpack5": "^8.2.9",
-        "@storybook/test": "^8.2.9",
-        "@types/react": "^18.3.5",
+        "@chromatic-com/storybook": "^1.9.0",
+        "@eslint/js": "^9.11.1",
+        "@storybook/addon-essentials": "^8.3.5",
+        "@storybook/addon-interactions": "^8.3.5",
+        "@storybook/addon-links": "^8.3.5",
+        "@storybook/addon-onboarding": "^8.3.5",
+        "@storybook/blocks": "^8.3.5",
+        "@storybook/builder-vite": "^8.3.5",
+        "@storybook/react": "^8.3.5",
+        "@storybook/react-vite": "^8.3.5",
+        "@storybook/test": "^8.3.5",
+        "@types/react": "^18.3.10",
         "@types/react-dom": "^18.3.0",
+        "@vitejs/plugin-react": "^4.3.2",
         "autoprefixer": "^10.4.20",
-        "chromatic": "^11.12.0",
-        "postcss": "^8.4.45",
-        "prop-types": "^15.8.1",
-        "tailwindcss": "^3.4.10",
-        "type": "^2.7.3",
-        "typescript": "^5.5.4",
-        "webpack": "^5.94.0"
+        "eslint": "^9.11.1",
+        "eslint-plugin-react-hooks": "^5.1.0-rc.0",
+        "eslint-plugin-react-refresh": "^0.4.12",
+        "eslint-plugin-storybook": "^0.9.0",
+        "globals": "^15.9.0",
+        "postcss": "^8.4.47",
+        "storybook": "^8.3.5",
+        "tailwindcss": "^3.4.14",
+        "typescript": "^5.5.3",
+        "typescript-eslint": "^8.7.0",
+        "vite": "^5.4.8",
+        "vite-plugin-dts": "^4.2.4",
+        "vite-plugin-static-copy": "^2.0.0",
+        "vite-tsconfig-paths": "^5.0.1"
     },
-    "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
+    "eslintConfig": {
+        "extends": [
+            "plugin:storybook/recommended"
         ]
     }
 }
