@@ -1,23 +1,14 @@
-import { InputProps } from 'src/type'
+import { InputProps } from '@/type'
 import Icon from '../icons'
 import ErrorDescription from './ErrorDescription'
 import FieldLabel from './FieldLabel'
 
-const Input = ({
-    error,
-    value,
-    placeholder,
-    icon = false,
-    onChange,
-    ...props
-}: InputProps) => {
+const Input = ({ error, value, placeholder, icon = false, onChange, ...props }: InputProps) => {
     return (
         <div className="w-full relative">
             <FieldLabel
                 htmlFor="input"
-                className={`absolute -top-2 left-4 focus-within:text-primary-300 ${
-                    error ? 'text-error' : ''
-                }`}
+                className={`absolute -top-2 left-4 focus-within:text-primary-300 ${error ? 'text-error' : ''}`}
             >
                 label
             </FieldLabel>
@@ -46,10 +37,7 @@ const Input = ({
                     />
                 )}
             </div>
-            <ErrorDescription
-                error={error || ''}
-                className="absolute -bottom-6 left-4"
-            />
+            <ErrorDescription error={error || ''} className="absolute -bottom-6 left-4" />
         </div>
     )
 }

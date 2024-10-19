@@ -21,6 +21,8 @@
             "@/components/*": ["src/components/*"]
         },
 
+        "esModuleInterop": true,
+
         /* Linting */
         "strict": true,
         "noUnusedLocals": true,
@@ -28,6 +30,5 @@
         "noFallthroughCasesInSwitch": true
     },
     "include": ["src"],
-    "exclude": ["src/stories"],
     "references": [{ "path": "./tsconfig.node.json" }]
 }

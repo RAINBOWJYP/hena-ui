@@ -1,17 +1,6 @@
-import Icon from '@/icons'
 import HenaIcon from '@/icons/icon'
+import { ButtonProps } from '@/type/button'
 import { setClassName } from '@/utils/classFix'
-import React from 'react'
-export interface ButtonProps {
-    color?: 'primary' | 'secondary' | 'tertiary'
-    variant?: 'outline' | 'filled' | 'text'
-    size?: 'small' | 'medium' | 'large'
-    icon?: keyof typeof Icon | null
-    iconOnly?: boolean
-    disabled?: boolean
-    children?: React.ReactNode
-    onClick?: () => void
-}
 
 const Button = ({
     variant = 'filled',
@@ -28,16 +17,12 @@ const Button = ({
             filled: {
                 primary: 'bg-primary-500 text-white hover:bg-primary-700',
                 secondary: 'bg-secondary-500 text-white hover:bg-secondary-700',
-                tertiary:
-                    'bg-tertiary-500 text-netural-800 hover:bg-tertiary-400',
+                tertiary: 'bg-tertiary-500 text-netural-800 hover:bg-tertiary-400',
             },
             outline: {
-                primary:
-                    'border border-primary-500 text-primary-500 hover:bg-primary-50',
-                secondary:
-                    'border border-secondary-500 text-secondary-500 hover:bg-secondary-50',
-                tertiary:
-                    'border border-tertiary-500 text-tertiary-500 hover:bg-tertiary-50',
+                primary: 'border border-primary-500 text-primary-500 hover:bg-primary-50',
+                secondary: 'border border-secondary-500 text-secondary-500 hover:bg-secondary-50',
+                tertiary: 'border border-tertiary-500 text-tertiary-500 hover:bg-tertiary-50',
             },
             text: {
                 primary: 'text-primary-500 hover:bg-primary-50',
@@ -76,17 +61,8 @@ const Button = ({
         },
     }
     return (
-        <button
-            className={className + ''}
-            disabled={disabled}
-            onClick={onClick}
-        >
-            {icon && (
-                <HenaIcon
-                    iconName={icon}
-                    className={iconColor[variant][color]}
-                />
-            )}
+        <button className={className + ''} disabled={disabled} onClick={onClick}>
+            {icon && <HenaIcon iconName={icon} className={iconColor[variant][color]} />}
             {iconOnly ? null : children}
         </button>
     )
